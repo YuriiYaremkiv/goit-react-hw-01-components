@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -24,51 +22,170 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+  <title>React App</title>
 
-    <!-- Start Single Page Apps for GitHub Pages -->
-    <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-      // MIT License
-      // https://github.com/rafgraph/spa-github-pages
-      // This script checks to see if a redirect is present in the query string,
-      // converts it back into the correct url and adds it to the
-      // browser's history using window.history.replaceState(...),
-      // which won't cause the browser to attempt to load the new url.
-      // When the single page app is loaded further down in this file,
-      // the correct url will be waiting in the browser's history for
-      // the single page app to route accordingly.
-      (function (l) {
-        if (l.search[1] === '/') {
-          var decoded = l.search
-            .slice(1)
-            .split('&')
-            .map(function (s) {
-              return s.replace(/~and~/g, '&');
-            })
-            .join('?');
-          window.history.replaceState(
-            null,
-            null,
-            l.pathname.slice(0, -1) + decoded + l.hash
-          );
-        }
-      })(window.location);
-    </script>
-    <!-- End Single Page Apps for GitHub Pages -->
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+  <!-- Start Single Page Apps for GitHub Pages -->
+  <script type="text/javascript">
+    // Single Page Apps for GitHub Pages
+    // MIT License
+    // https://github.com/rafgraph/spa-github-pages
+    // This script checks to see if a redirect is present in the query string,
+    // converts it back into the correct url and adds it to the
+    // browser's history using window.history.replaceState(...),
+    // which won't cause the browser to attempt to load the new url.
+    // When the single page app is loaded further down in this file,
+    // the correct url will be waiting in the browser's history for
+    // the single page app to route accordingly.
+    (function (l) {
+      if (l.search[1] === '/') {
+        var decoded = l.search
+          .slice(1)
+          .split('&')
+          .map(function (s) {
+            return s.replace(/~and~/g, '&');
+          })
+          .join('?');
+        window.history.replaceState(
+          null,
+          null,
+          l.pathname.slice(0, -1) + decoded + l.hash
+        );
+      }
+    })(window.location);
+  </script>
+  <!-- End Single Page Apps for GitHub Pages -->
+</head>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+  <div class="container">
+
+    <!-- Start  -->
+    <div class="profile">
+      <div class="profile__description">
+        <img class="profile__img" src="https://cdn-icons-png.flaticon.com/512/2922/2922506.png" alt="User avatar" />
+        <p class="profile__name">Petra Marica</p>
+        <p class="profile__text">@pmarica</p>
+        <p class="profile__text">Salvador, Brasil</p>
+      </div>
+
+      <ul class="stats">
+        <li class="stats__item">
+          <span class="stats__label">Followers</span>
+          <span class="stats__quantity">1000</span>
+        </li>
+        <li class="stats__item">
+          <span class="stats__label">Views</span>
+          <span class="stats__quantity">2000</span>
+        </li>
+        <li class="stats__item">
+          <span class="stats__label">Likes</span>
+          <span class="stats__quantity">3000</span>
+        </li>
+      </ul>
+    </div>
+
+    <section class="statistics">
+      <h2 class="statistics__title">Upload stats</h2>
+
+      <ul class="statistics__list">
+        <li class="statistics__item">
+          <span class="statistics__label">.docx</span>
+          <span class="statistics__percentage">4%</span>
+        </li>
+        <li class="statistics__item">
+          <span class="statistics__label">.mp3</span>
+          <span class="statistics__percentage">14%</span>
+        </li>
+        <li class="statistics__item">
+          <span class="statistics__label">.pdf</span>
+          <span class="statistics__percentage">41%</span>
+        </li>
+        <li class="statistics__item">
+          <span class="statistics__label">.mp4</span>
+          <span class="statistics__percentage">12%</span>
+        </li>
+      </ul>
+    </section>
+
+
+    <ul class="friend-list">
+      <!-- Произвольное кол-во FriendListItem -->
+      <li class="friend-list__item">
+        <span class="friend-list__status"></span>
+        <img class="friend-list__img" src="https://cdn-icons-png.flaticon.com/512/1998/1998592.png"
+          alt="User friend-list__img" width="100" />
+        <p class="friend-list__name">Mango</p>
+      </li>
+      <li class="friend-list__item">
+        <span class="friend-list__status"></span>
+        <img class="friend-list__img" src="https://cdn-icons-png.flaticon.com/512/1998/1998592.png" alt="User avatar"
+          width="100" />
+        <p class="friend-list__name">Mango</p>
+      </li>
+    </ul>
+
+    <table class="transaction-history">
+      <thead>
+        <tr class="table-header">
+          <th class="table-header__th">Type</th>
+          <th class="table-header__th">Amount</th>
+          <th class="table-header__th">Currency</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Invoice</td>
+          <td>125</td>
+          <td>USD</td>
+        </tr>
+        <tr>
+          <td>Withdrawal</td>
+          <td>85</td>
+          <td>USD</td>
+        </tr>
+        <tr>
+          <td>Withdrawal</td>
+          <td>85</td>
+          <td>USD</td>
+        </tr>
+        <tr>
+          <td>Withdrawal</td>
+          <td>85</td>
+          <td>USD</td>
+        </tr>
+        <tr>
+          <td>Withdrawal</td>
+          <td>85</td>
+          <td>USD</td>
+        </tr>
+        <tr>
+          <td>Withdrawal</td>
+          <td>85</td>
+          <td>USD</td>
+        </tr>
+        <tr>
+          <td>Withdrawal</td>
+          <td>85</td>
+          <td>USD</td>
+        </tr>
+        <tr>
+          <td>Withdrawal</td>
+          <td>85</td>
+          <td>USD</td>
+        </tr>
+        <tr>
+          <td>Withdrawal</td>
+          <td>85</td>
+          <td>USD</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- End -->
+  </div>
+</body>
+
 </html>
