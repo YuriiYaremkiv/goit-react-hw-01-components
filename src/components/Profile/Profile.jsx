@@ -1,30 +1,31 @@
-import { Card } from './Profile.styled';
-
+import { Card, Image, Container, ProfilName, ProfilText, List, ListItem, ListLabel, ListQuantity } from './Profile.styled';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
     <Card>
-      <div className="description">
-        <img src={avatar} alt={username} className="avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">{tag}</p>
-        <p className="location">{location}</p>
-      </div>
+      <Container>
+        <Image
+          src={avatar}
+          alt={username} />
+        <ProfilName>{username}</ProfilName>
+        <ProfilText>{tag}</ProfilText>
+        <ProfilText>{location}</ProfilText>
+      </Container>
 
-      <ul className="stats">
-        <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{stats.followers}</span>
-        </li>
-        <li>
-          <span className="label">Views</span>
-          <span className="quantity">{stats.views}</span>
-        </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{stats.likes}</span>
-        </li>
-      </ul>
+      <List>
+        <ListItem>
+          <ListLabel>Followers</ListLabel>
+          <ListQuantity>{stats.followers}</ListQuantity>
+        </ListItem>
+        <ListItem>
+          <ListLabel>Views</ListLabel>
+          <ListQuantity>{stats.views}</ListQuantity>
+        </ListItem>
+        <ListItem>
+          <ListLabel>Likes</ListLabel>
+          <ListQuantity>{stats.likes}</ListQuantity>
+        </ListItem>
+      </List>
     </Card>
   );
 };
