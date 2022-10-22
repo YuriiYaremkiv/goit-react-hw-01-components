@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { findByLabelText } from "@testing-library/react";
 
 export const List = styled.ul`
   width: 500px;
