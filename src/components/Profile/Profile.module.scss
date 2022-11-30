@@ -1,6 +1,4 @@
-import styled from '@emotion/styled'
-
-export const Card = styled.div`
+.card {
   width: 450px;
   margin-bottom: 100px;
 
@@ -9,17 +7,17 @@ export const Card = styled.div`
   background-color: white;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-`
+}
 
-export const Container = styled.div`
+.card__container {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   padding: 32px;
-`
+}
 
-export const Image = styled.img`
+.carg__img {
   display: block;
   width: 100%;
   max-width: 250px;
@@ -29,31 +27,31 @@ export const Image = styled.img`
   background-size: 50%;
 
   border-radius: 50%;
-`
+}
 
-export const ProfilName = styled.p`
+.card__name {
   margin-bottom: 16px;
 
   font-size: 32px;
   font-weight: 700;
-`
+}
 
-export const ProfilText = styled.p`
+.card__text {
   margin-bottom: 16px;
 
   font-size: 24px;
   color: #6d7178;
-`
+}
 
-export const List = styled.ul`
+.card__list {
   display: flex;
   justify-content: center;
 
   border-top: 1px solid #d6d6d6;
   background-color: #f4f0f0;
-`
+}
 
-export const ListItem = styled.ul`
+.card__item {
   width: 33.333%;
   padding: 24px;
 
@@ -61,16 +59,17 @@ export const ListItem = styled.ul`
 
   :not(:last-child) {
     border-right: 1px solid #d6d6d6;
-`
+  }
+}
 
-export const ListLabel = styled.ul`
+.card__itemName {
   display: block;
 
   font-size: 22px;
   color: #6d7178;
-`
+}
 
-export const ListQuantity = styled.ul`
+.card__itemValue {
   display: block;
   color: #6d7178;
   margin-top: 12px;
@@ -78,4 +77,4 @@ export const ListQuantity = styled.ul`
   font-size: 22px;
   font-weight: 700;
   color: black;
-`
+}

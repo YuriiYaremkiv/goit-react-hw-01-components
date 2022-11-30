@@ -9,15 +9,16 @@ import {
 } from './Statistics.styled';
 
 export const Statistics = ({ title, data }) => {
+  const arrayLength = data.length;
   return (
     <Section>
       {title ? <Title>{title}</Title> : null}
       <List>
-        {data.map(statistic => {
+        {data.map(({ id, label, percentage }) => {
           return (
-            <ListItem key={statistic.id} value={data.length}>
-              <Label>{statistic.label}</Label>
-              <Percentage>{statistic.percentage}%</Percentage>
+            <ListItem key={id} value={arrayLength}>
+              <Label>{label}</Label>
+              <Percentage>{percentage}%</Percentage>
             </ListItem>
           );
         })}
@@ -28,5 +29,11 @@ export const Statistics = ({ title, data }) => {
 
 Statistics.propTypes = {
   title: PropTypes.string,
-  data: PropTypes.array.isRequired,
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    }).isRequired
+  ).isRequired,
 };

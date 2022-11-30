@@ -1,9 +1,9 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
 export const List = styled.ul`
   width: 500px;
   margin-bottom: 100px;
-`
+`;
 
 export const ListItem = styled.li`
   padding: 16px 16px;
@@ -19,24 +19,24 @@ export const ListItem = styled.li`
   :not(:last-child) {
     margin-bottom: 20px;
   }
-`
+`;
 
 export const ListItemStatus = styled.span`
   width: 24px;
   height: 24px;
   margin-right: 16px;
 
-  background-color: ${friend => {
-    return friend.online.isOnline ? 'green' : 'red';
+  background-color: ${isOnline => {
+    return isOnline.online ? 'green' : 'red';
   }};
   border-radius: 50%;
-`
+`;
 export const Image = styled.img`
   margin-right: 16px;
   background-color: #6d7178;
   border-radius: 8px;
-`
+`;
 
 export const ListName = styled.p`
   font-size: 32px;
-`
+`;

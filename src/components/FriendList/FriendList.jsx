@@ -10,12 +10,12 @@ import {
 export const FriendList = ({ friends }) => {
   return (
     <List>
-      {friends.map(friend => {
+      {friends.map(({ id, isOnline, avatar, name }) => {
         return (
-          <ListItem key={friend.id}>
-            <ListItemStatus online={friend}></ListItemStatus>
-            <Image src={friend.avatar} alt={friend.name} width="100" />
-            <ListName>{friend.name}</ListName>
+          <ListItem key={id}>
+            <ListItemStatus online={isOnline}></ListItemStatus>
+            <Image src={avatar} alt={name} width="100" />
+            <ListName>{name}</ListName>
           </ListItem>
         );
       })}
@@ -24,5 +24,12 @@ export const FriendList = ({ friends }) => {
 };
 
 FriendList.propTypes = {
-  friends: PropTypes.array.isRequired,
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
 };
