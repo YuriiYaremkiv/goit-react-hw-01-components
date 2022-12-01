@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { getRandomHexColor } from '../utils/randomColor';
+import { getRandomHexColor } from '../../utils/randomColor';
 
 export const Section = styled.section`
   width: 500px;
